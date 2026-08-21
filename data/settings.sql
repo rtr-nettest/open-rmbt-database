@@ -68,6 +68,7 @@ COPY public.settings (uid, key, lang, value) FROM stdin;
 9	url_statistics	de	https://example.com/de/statistics#noMMenu
 8	url_statistics	\N	https://example.com/en/statistics#noMMenu
 58	classification_thresholds	\N	{"download_kbit":{"2":5001,"3":10000,"4":100000},"upload_kbit":{"2":10000,"3":20000,"4":30000},"ping_ms":{"2":75,"3":25,"4":10},"signal_mobile":{"2":-101,"3":-85,"4":-75},"signal_mobile_rsrp":{"2":-111,"3":-95,"4":-85},"signal_wifi":{"2":-76,"3":-61,"4":-51}}
+60	signal_measurement_available	\N	FALSE
 \.
 
 
@@ -75,7 +76,7 @@ COPY public.settings (uid, key, lang, value) FROM stdin;
 -- Name: settings_uid_seq; Type: SEQUENCE SET; Schema: public; Owner: rmbt
 --
 
-SELECT pg_catalog.setval('public.settings_uid_seq', 59, true);
+SELECT pg_catalog.setval('public.settings_uid_seq', 60, true);
 
 
 --
